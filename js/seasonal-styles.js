@@ -4,58 +4,44 @@ $("document").ready(function(){
         var season = $(this).attr("href");//contents of href attribute of this element
         //alert(season);
 
-
+        //make the season lower case
         season = season.toLowerCase();
-
+        
         switch(season){
             case "spring":
-                $("#logo").attr("src", "images/spring.gif");
+                $("#logo").attr("src","images/spring.gif");
+                $("#wear").attr("src","images/spring-wear.jpg");
                 $("html").css("background-color","#2B7129");
-                $("#wear").attr("src", "images/spring-wear.jpg");
-                $("h3").text("Leap into Spring wear");
-                    
+                $("#myHeader").text("This is Spring!");
             break;
 
             case "summer":
-                $("#logo").attr("src", "images/summer.gif");
-                $("html").css("background-color"," #EBA52B");
-                $("#wear").attr("src", "images/summer-wear.jpg");
-                $("h3").text("Leap into Summer wear");
+                $("#logo").attr("src","images/summer.gif");
+                $("#wear").attr("src","images/summer-wear.jpg");
+                $("html").css("background-color","#EBA52B");
+                $("#myHeader").text("This is Summer!");
             break;
 
             case "fall":
-                $("#logo").attr("src", "images/fall.gif");
+                $("#logo").attr("src","images/fall.gif");
+                $("#wear").attr("src","images/fall-wear.jpg");
                 $("html").css("background-color","#A81124");
-                $("#wear").attr("src", "images/fall-wear.jpg");
-                $("h3").text("Leap into Fall wear");
-                
+                $("#myHeader").text("This is Fall!");
             break;
 
             case "winter":
-                $("#logo").attr("src", "images/winter.gif");
+                $("#logo").attr("src","images/winter.gif");
+                $("#wear").attr("src","images/winter-wear.jpg");
                 $("html").css("background-color","#005393");
-                $("#wear").attr("src", "images/winter-wear.jpg");
-                $("h3").text("Leap into Winter wear");
+                $("#myHeader").text("This is Winter!");
             break;
 
-            case "default":
-                $("#logo").attr("src", "images/four-seasons.gif");
-                $("html").css("background-color","white");
-                $("#wear").attr("src", "images/300x400.png");
-                $("h3").text("Leap into seasonal wear");
-            break;
-
-
-            //default:
-                //alert("You didn't hit a case!")
-
-
+            default:
+                $("#logo").attr("src","images/four-seasons.gif");
+                $("#wear").attr("src","images/300x400.png");
+                $("html").css("background-color","#cccccc");
+                $("#myHeader").text("Outfitter for All Seasons!");
         }
-
-
-
-  
-
 
 
 
